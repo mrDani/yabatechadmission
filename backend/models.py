@@ -2,9 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Home(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -13,9 +13,9 @@ class Home(models.Model):
         db_table = 'home'
 
 class Allprogrammes(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -24,9 +24,9 @@ class Allprogrammes(models.Model):
         db_table = 'Allprogrammes'
 
 class Ndfulltime(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -34,9 +34,9 @@ class Ndfulltime(models.Model):
         db_table = 'ndfulltime'
 
 class Hndfulltime(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -44,9 +44,9 @@ class Hndfulltime(models.Model):
         db_table = 'hndfulltime'
 
 class Ndparttime(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -54,9 +54,9 @@ class Ndparttime(models.Model):
         db_table = 'ndparttime'
 
 class Hndparttime(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -64,9 +64,9 @@ class Hndparttime(models.Model):
         db_table = 'hndparttime'
 
 class Nsukka(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -74,9 +74,9 @@ class Nsukka(models.Model):
         db_table = 'nsukka'
 
 class Certificate(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -84,9 +84,9 @@ class Certificate(models.Model):
         db_table = 'certificate'
 
 class Postgraduates(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -94,9 +94,9 @@ class Postgraduates(models.Model):
         db_table = 'postgraduates'
 
 class Tutorials(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -104,9 +104,9 @@ class Tutorials(models.Model):
         db_table = 'tutorials'
 
 class Campus(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -114,9 +114,9 @@ class Campus(models.Model):
         db_table = 'campus'
 
 class Hostel(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -124,9 +124,9 @@ class Hostel(models.Model):
         db_table = 'hostel'
 
 class Admissionrequirement(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
@@ -134,9 +134,9 @@ class Admissionrequirement(models.Model):
         db_table = 'Admissionrequirement'
 
 class postutme(models.Model):
-    title = models.CharField(max_length=250)
+    title = models.CharField(max_length=50)
     image = models.ImageField()
-    content = models.CharField(max_length=100000)
+    content = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField()
 
