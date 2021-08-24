@@ -1,0 +1,151 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h1 id="carouseltext" class="carousel-caption" style="color: #010801;">Welcome to YabatechAdmissionDirect</h1> 
+
+                <img src="{% static '/images/image1.png' %}" id="imagge" alt="First Slide" class="img-responsive">
+                
+            </div>
+            <div class="carousel-item">
+                <img src="{% static '/images/image6.jpg' %}" id="imagge" alt="Second Slide" class="img-responsive">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static '/images/image2.jpg' %}" id="imagge" alt="Third Slide" class="img-responsive">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static '/images/image4.jpg' %}" id="imagge" alt="Third Slide" class="img-responsive">
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+<br>
+<section>
+    <h2 class="text-center">Popular Programmes</h2>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 thumbnail">
+                <div class="card">
+                    <img class="card-img-top img-responsive imag" src="{% static '/images/image2.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title border-bottom pb-3">HND Full-Time <a href="#"
+                                class="float-right d-inline-flex share"><i class="btn btn-sm btn-info btn-default fas fa-share-alt" style="background-color: #006600;"></i></a></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-sm btn-info float-right" style="background-color: #006600;">Read more <i class="fas fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <div class="card">
+                    <img class="card-img-top img-responsive imag" src="{% static '/images/image2.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title border-bottom pb-3">ND Full-Time <a href="#"
+                                class="float-right btn btn-sm btn-info d-inline-flex share" style="background-color: #006600;"><i class="fas fa-share-alt"></i></a>
+                        </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-sm btn-info float-right" style="background-color: #006600;">Read more <i
+                                class="fas fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 thumbnail">
+                <div class="card bg-light">
+                    <img class="card-img-top img-responsive imag" src="{% static '/images/image4.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title border-bottom pb-3">ND Part-Time <a href="#"
+                                class="float-right btn btn-sm btn-info d-inline-flex share" style="background-color: #006600;"><i class="fas fa-share-alt"></i></a>
+                        </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-sm btn-info float-right" style="background-color: #006600;">Read more <i
+                                class="fas fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<hr>
+    <!-- ======= Blog Section ======= -->
+    <h2 class="text-center">News</h2>
+    <section id="blog" class="blog">
+        <div class="container">
+    
+            <div class="row">
+                {% for programme in programme %}
+                <div class="col-lg-4  col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+                    <article class="entry">
+    
+                        <div class="entry-img">
+                            <img src="{{ programme.image.url }}" alt="" class="img-fluid">
+                        </div>
+    
+                        <h2 class="entry-title">
+                            <a href="{% url 'fehomeblog' programme.id %}">{{ programme.title }}</a>
+                        </h2>
+    
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="icofont-user"></i> <a
+                                        href="{% url 'fehomeblog' programme.id %}">Sir-K</a></li>
+                                <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a
+                                        href="{% url 'fehomeblog' programme.id %}"><time datetime="2020-01-01">
+                                            {{ programme.date_created }}</time></a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="entry-content">
+                            <p>
+                                {{ programme.content|linebreaks|truncatechars:100 }}
+                            </p>
+                            <div class="read-more">
+                                <a href="{% url 'fehomeblog' programme.id %}">Read More</a>
+                            </div>
+                        </div>
+    
+                    </article><!-- End blog entry -->
+                </div>
+                {% endfor %}
+    
+            </div>
+    
+            <div class="blog-pagination" data-aos="fade-up">
+                <ul class="justify-content-center">
+                    <li class="disabled"><i class="icofont-rounded-left"></i></li>
+                    <li><a href="#">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
+                </ul>
+            </div>
+    
+        </div>
+    </section><!-- End Blog Section -->
+
+
+{% endblock %}

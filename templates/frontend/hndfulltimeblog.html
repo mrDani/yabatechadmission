@@ -1,0 +1,115 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'navbar.html' %}
+<br>
+<br>
+<hr>
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="breadcrumb-hero">
+            <div class="container">
+                <div class="breadcrumb-hero">
+                    <h2>{{programme.title}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ol>
+                <li id="lii"><a href="{% url 'fehndfulltime' %}" style="color: black;">HND Full-Time</a></li>
+                <li>{{programme.title}}</li>
+            </ol>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-8 entries">
+
+                    <article class="entry entry-single">
+
+                        <div class="entry-img">
+                            <img src="{{ programme.image.url }}" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="entry-title">
+                            <a href="">{{programme.title}}</a>
+                        </h2>
+
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="">Sir-K
+                                    </a></li>
+                                <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a
+                                        href=""><time datetime="2020-01-01">{{programme.date_created}}</time></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="entry-content">
+                            <p>
+                                {{programme.content}}
+                            </p>
+
+
+
+
+
+
+                        </div>
+
+                        <div class="entry-footer clearfix">
+                            <div class="float-left">
+
+
+
+
+                            </div>
+
+                            <div class="float-right share">
+                                <a href="https://m.facebook.com/unilagadmissioninquiries/?ref=bookmarks"
+                                    title="Share on Facebook"><i class="icofont-facebook"></i></a>
+                                <a href="https://www.instagram.com/unilagadmissioninquiries/"
+                                    title="Share on Instagram"><i class="icofont-instagram"></i></a>
+                            </div>
+
+                        </div>
+
+                    </article><!-- End blog entry -->
+
+                    <div class="blog-author clearfix">
+
+                        <h4>Kayode </h4>
+                        <div class="social-links">
+                            <a href="https://m.facebook.com/unilagadmissioninquiries/?ref=bookmarks"><i
+                                    class="icofont-facebook"></i></a>
+                            <a href="https://www.instagram.com/unilagadmissioninquiries/"><i
+                                    class="icofont-instagram"></i></a>
+                        </div>
+                        <p>
+                            Author of this post
+                        </p>
+                    </div><!-- End blog author bio -->
+
+                </div><!-- End blog entries list -->
+
+                <div class="col-lg-4">
+
+
+
+                </div><!-- End blog sidebar -->
+
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+
+</main><!-- End #main -->
+
+{% endblock %}

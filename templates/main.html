@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YabatechAdmissionDirect</title>
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <link rel="stylesheet"
+        href="{% static '/css/fonts%2c_icomoon%2c_style.css%2bcss%2c_owl.carousel.min.css%2bcss%2c_bootstrap.min.css%2bcss%2c_style.css.pagespeed.cc.wdgYLTo89O.css' %}" />
+    
+    <link rel="stylesheet" type="text/css" href="{% static '/vendor/bootstrap/css/bootstrap.min.css' %}">
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="{% static '/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+   
+    <link rel="stylesheet" type="text/css" href="{% static '/vendor/animate/animate.css' %}">
+    
+    <link rel="stylesheet" type="text/css" href="{% static '/vendor/css-hamburgers/hamburgers.min.css' %}">
+    
+    <link rel="stylesheet" type="text/css" href="{% static '/vendor/animsition/css/animsition.min.css' %}">
+    
+    <link rel="stylesheet" type="text/css" href="{% static '/vendor/select2/select2.min.css' %}">
+    
+    <link rel="stylesheet" type="text/css" href="{% static '/vendor/daterangepicker/daterangepicker.css' %}">
+
+   
+    <link rel="stylesheet" type="text/css" href="{% static '/css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+</head>
+<body>
+        {% block content %}
+        
+        {% endblock %}
+
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-info">
+                    <h3>YabatechAdmission</h3>
+                    <p>
+                        As individuals who have gone through the system, gaining admission into the Yaba College of Technology
+                        is not an easy task.
+                        This is due to lack of information on how to prepare.
+                        We provide adequate information and assistance and make the admission much easier.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="{% url 'fehome' %}">Home</a></li>
+                        <li><a href="{% url 'feadmissionrequirement' %}">Admission Requirement</a></li>
+                        <li><a href="{% url 'fepostutme' %}">Post UTME</a></li>
+                        <li><a href="{% url 'fehostel' %}">Hostel & Accomodation</a></li>
+                        
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h4>Contact Us</h4>
+                    <p style="color: white;">
+                        University of Lagos Akoka <br>
+                        Yaba, Lagos State<br>
+                        NIgeria<br>
+                        <strong>Phone:</strong>+2348069258796<br>+2348074180836<br>
+                        <strong>Email:</strong> unilagadmissioninquiries@gmail.com<br>
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://web.facebook.com/unilagadmissioninquiries" class="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <a href="https://www.instagram.com/unilagadmissioninquiries/" class="instagram"><i
+                                class="fab fa-instagram"></i></a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-newsletter">
+                    <h4>Our Newsletter</h4>
+                    <p style="color: white;">Welcome to YabatechAdmissionDirect.Subcribe to our Newsletter to get frequent updates on
+                        Admission in Yabatech</p>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>YabatechAdmissionDirect</span></strong>. All Rights Reserved
+        </div>
+
+    </div>
+</footer><!-- End Footer -->
+
+
+
+    
+
+    <script src="{% static '/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+    
+    <script src="{% static '/vendor/animsition/js/animsition.min.js' %}"></script>
+    
+    <script src="{% static '/vendor/bootstrap/js/popper.js' %}"></script>
+    <script src="{% static '/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    
+    <script src="{% static '/vendor/select2/select2.min.js' %}"></script>
+    
+    <script src="{% static '/vendor/daterangepicker/moment.min.js' %}"></script>
+    <script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
+    
+    <script src="{% static '/vendor/countdowntime/countdowntime.js' %}"></script>
+
+    <script src="{% static '/js/main.js' %}"></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script defer src="../../../../static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"rayId":"6791069c0af9c4fc","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.7.0","si":10}'></script>
+
+
+</body>
+</html>

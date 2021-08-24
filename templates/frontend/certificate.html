@@ -1,0 +1,85 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'navbar.html' %}
+<br><br>
+<hr>
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="breadcrumb-hero">
+            <div class="container">
+                <div class="breadcrumb-hero">
+                    <h2>Certificate</h2>
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ol id="lii">
+                <li><a href="{% url 'fehome' %}">Home</a></li>
+                <li>Certificate</li>
+            </ol>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container">
+
+            <div class="row">
+                {% for programme in programme %}
+                <div class="col-lg-4  col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+                    <article class="entry">
+
+                        <div class="entry-img">
+                            <img src="{{ programme.image.url }}" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="entry-title">
+                            <a href="{% url 'fecertificateblog' programme.id %}">{{ programme.title }}</a>
+                        </h2>
+
+                        <div class="entry-meta">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="icofont-user"></i> <a
+                                        href="{% url 'fecertificateblog' programme.id %}">Victor</a></li>
+                                <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i>
+                                    <a href="{% url 'fecertificateblog' programme.id %}">
+                                        <time datetime="2020-01-01">{{ programme.date_created }}</time>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="entry-content">
+                            <p>
+                                {{ programme.content|linebreaks|truncatechars:100 }}
+                            </p>
+                            <div class="read-more">
+                                <a href="{% url 'fecertificateblog' programme.id %}">Read More</a>
+                            </div>
+                        </div>
+
+                    </article><!-- End blog entry -->
+                </div>
+                {% endfor %}
+
+            </div>
+
+            <div class="blog-pagination" data-aos="fade-up">
+                <ul class="justify-content-center">
+                    <li class="disabled"><i class="icofont-rounded-left"></i></li>
+                    <li><a href="#">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section><!-- End Blog Section -->
+</main>
+
+{% endblock %}
