@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'yabatechadmissiondirect.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'yabatech',
+        'NAME': 'yabadb',
         'USER': 'postgres',
         'PASSWORD': 'babalola',
         'HOST': 'localhost',

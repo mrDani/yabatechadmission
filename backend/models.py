@@ -142,3 +142,13 @@ class postutme(models.Model):
 
     class Meta:
         db_table = 'postutme'
+
+class Test(models.Model):
+    title = models.CharField(max_length=50)
+    image = models.ImageField()
+    content = models.TextField()
+    date_created = models.DateTimeField(auto_now_add=True)
+    is_deleted = models.BooleanField()
+
+    class Meta:
+        db_table = 'test'
